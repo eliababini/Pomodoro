@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Study Timer</title>
+    <link rel="stylesheet" href="pomodoro.css">
+</head>
+
+<body>
+    <h1>Pomodoro Study Timer</h1>
+    
+    <form id="studyForm">
+        <div style="float:left; margin-right:100px;">
+            <label for="studyTime">Study Time:</label>
+            <input type="time" id="studyTime" name="studyTime" min="00:00:00" max="00:59:59" step="1" required>
+        </div>
+
+        <div style="float:left; margin-right:100px;">
+            <label for="pauseTime">Pause Time:</label>
+            <input type="time" id="pauseTime" name="pauseTime" min="00:00:00" max="00:59:59" step="1" required>
+        </div>
+
+        <div style="float:left;">
+            <label for="cycles">Repeat for:</label>
+            <input type="number" id="cycles" name="cycles" min=1 value="1"> times
+        </div>
+</br>
+    
+    <button id="clear">Clear</button>
+    
+    
+    <button id="start" type="submit">Start</button>
+    </form>
+
+    <div class="clock">
+        <div id="timer">00:00</div>
+        <img src="tomato.svg" alt="Tomato">
+        <div id="juice"></div>
+    </div>
+          
+</body>
+
+<script src="pomodoro.js" charset="utf-8"></script>
+
+</html>

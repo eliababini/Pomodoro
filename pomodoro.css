@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    z-index: 2;
+    overflow: hidden;
+    background-color: aquamarine;
+}
+
+h1 {
+    margin: 30px;
+    text-shadow: 5px 0 #232931;
+    font-size: 3em;
+    color: red;
+    z-index: 2;
+}
+
+#studyForm {
+    position: relative;
+    z-index: 2;
+}
+
+input {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.5em;
+    border: 1px solid purple;
+    border-radius: 5px;
+}
+
+#cycles {
+    width: 80px;
+    font-size: 1em;
+}
+
+#clear {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.5em;
+    border: 1px solid purple;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+}
+
+#start {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.5em;
+    border: 1px solid purple;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+}
+
+
+
+.clock{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    z-index: 1;
+}
+
+img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+
+#timer {
+    position: absolute;     
+    top: 55%;
+    font-size: 2.5em;
+    z-index: 3;
+    color: black;
+}
+
+#juice {
+    width: 400px;
+    height: 330px;
+    margin-top: 55px;
+    border-radius: 60% 60% 50% 50% / 70% 70% 50% 50%;
+    background-color: red;
+    z-index:2;
+}
+
+#juice::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0%;
+    left: 0%;
+    z-index: -2;
+    background-color: aquamarine;
+    border-radius:40%;}
+
+@keyframes spin {
+    0% {
+        transform: translateY(0%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-75%) rotate(720deg);
+    }
+}
+
+@keyframes spinreverse {
+    0% {
+        transform: translateY(0%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(75%) rotate(720deg);
+    }
+}
